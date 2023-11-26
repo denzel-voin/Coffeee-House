@@ -1,12 +1,11 @@
 .page {
-  background-color: #E1D4C9;
+  background-color: var(--background-body);
   margin: 20px auto 40px auto;
   padding-inline-start: 40px;
   padding-inline-end: 40px;
   font-family: var(--font, sans-serif);
   font-size: 16px;
   font-weight: 400;
-  font-style: normal;
 }
 
 .header {
@@ -19,6 +18,8 @@
   font-style: inherit;
   font-weight: 600;
   line-height: 150%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .header__menu {
@@ -37,8 +38,8 @@
   align-self: stretch;
 }
 
-.header__links-list-item{
-  color: var(--text-color);
+.header__links-list-item {
+  color: var(--text-dark);
   text-decoration: none;
 }
 
@@ -50,9 +51,59 @@
 }
 
 .menu-page__item span {
-  color: var(--text-color);
+  color: var(--text-dark);
   text-decoration: none;
 }
+
+/*main*/
+
+.main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/*Choose*/
+
+.choose__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.choose__coffee {
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  gap: 20px;
+}
+
+.choose__coffee_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: var(--text-dark);
+}
+
+.choose__header {
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.choose__header_accent {
+  color: var(--text-accent);
+}
+
+.choose__btn {
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/*About*/
 
 .about {
   display: grid;
@@ -63,17 +114,12 @@
 
 .about__text {
   align-self: stretch;
-  color: var(--text-dark, #403F3D);
+  color: var(--text-dark);
   font-feature-settings: 'clig' off, 'liga' off;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 125%;
 }
 
 .text__accent {
-  color: var(--text-accent, #B0907A);
-  font-style: italic;
+  color: var(--text-accent);
 }
 
 .about__images {
@@ -102,3 +148,6 @@
   object-fit: cover;
   object-position: center;
 }
+
+/*Download*/
+
