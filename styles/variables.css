@@ -1,3 +1,57 @@
 :root {
-    --font: Inter, sans-serif;
+  --font: Inter, sans-serif;
+  --text-dark: #403F3D;
+  --text-light: #E1D4C9;
+  --text-accent: #B0907A;
+  --background-body: #E1D4C9;
+  --background-container: #665F55;
+  --background-backdrop: #403F3D;
+  --border-light: #C1B6AD;
+  --border-dark: #665F55;
+}
+
+.heading-1 {
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 75.60px;
+}
+
+.heading-2 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 75px;
+}
+
+.accent {
+  font-style: italic;
+}
+
+.heading-3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.medium {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.caption {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 14px;
+}
+
+link, button {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.burger-link {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
 }

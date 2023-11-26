@@ -1,67 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light" />
-    <title>Coffee house</title>
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="icon" href="./images/favicon/favicon.ico" sizes="any" />
-    <link rel="icon" href="./images/favicon/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.png" />
-  </head>
-  <body class="page">
-    <header class="header">
-      <div class="header__menu">
-        <a class="header__logo">
-          <img src="images/logo.png" alt="logo shop coffee house" />
-        </a>
-        <nav>
-          <ul class="header__links-list">
-            <li>
-              <a class="header__links-list-item" href="#link"
-                >Favorite coffee</a
-              >
-            </li>
-            <li><a class="header__links-list-item" href="#link">About</a></li>
-            <li>
-              <a class="header__links-list-item" href="#link">Mobile app</a>
-            </li>
-            <li>
-              <a class="header__links-list-item" href="#link">Contact us</a>
-            </li>
-          </ul>
-        </nav>
-        <a class="menu-page" href="#link" target="_blank">
-          <div class="menu-page__item">
-            <span>Menu</span>
-            <img src="images/icons/menu/coffee-cup.svg" alt="coffee cup" />
-          </div>
-        </a>
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="light" name="color-scheme"/>
+  <title>Coffee house</title>
+  <link href="./fonts/fonts.css" rel="stylesheet"/>
+  <link href="./styles/variables.css" rel="stylesheet"/>
+  <link href="./styles/globals.css" rel="stylesheet"/>
+  <link href="./styles/style.css" rel="stylesheet"/>
+  <link href="./images/favicon/favicon.ico" rel="icon" sizes="any"/>
+  <link href="./images/favicon/icon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="./images/favicon/apple-touch-icon.png" rel="apple-touch-icon"/>
+</head>
+<body class="page">
+<header class="header">
+  <div class="header__menu">
+    <a class="header__logo">
+      <img alt="logo shop coffee house" src="images/logo.png"/>
+    </a>
+    <nav>
+      <ul class="header__links-list">
+        <li>
+          <a class="header__links-list-item" href="#link"
+          >Favorite coffee</a
+          >
+        </li>
+        <li><a class="header__links-list-item" href="#link">About</a></li>
+        <li>
+          <a class="header__links-list-item" href="#link">Mobile app</a>
+        </li>
+        <li>
+          <a class="header__links-list-item" href="#link">Contact us</a>
+        </li>
+      </ul>
+    </nav>
+    <a class="menu-page" href="#link" target="_blank">
+      <div class="menu-page__item">
+        <span>Menu</span>
+        <img alt="coffee cup" src="images/icons/menu/coffee-cup.svg"/>
       </div>
-    </header>
-    <main>
-      <section class="about">
-        <p class="about__text">
-          Resource is <span class="text__accent">the perfect and cozy place</span> where you can
-          enjoy a variety of hot beverages, relax, catch up with friends, or get
-          some work done.
-        </p>
-        <div class="about__images">
-          <div class="about__images-column-1">
-            <img class="card" src="./images/about-1.jpg" alt="about 1" />
-            <img class="card" src="./images/about-2.jpg" alt="about 2" />
-          </div>
-          <div class="about__images-column-2">
-            <img class="card" src="./images/about-3.jpg" alt="about 3" />
-            <img class="card" src="./images/about-4.jpg" alt="about 4" />
-          </div>
+    </a>
+  </div>
+</header>
+<main class="main">
+  <section class="choose">
+    <h2 class="choose__header heading-2">Choose your <span class="choose__header_accent accent">favorite</span> coffee
+    </h2>
+    <div class="choose__container">
+      <button class="choose__btn">←</button>
+      <div class="choose__coffee">
+        <img alt="Frappuccino" class="choose__img" src="./images/coffee-slider-1.png">
+        <div class="choose__coffee_content">
+          <h3 class="heading-3">S’mores Frappuccino</h3>
+          <p class="medium">
+            This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.
+          </p>
+          <p class="heading-3">$5.50</p>
         </div>
-      </section>
-    </main>
-    <footer></footer>
-  </body>
+      </div>
+      <button class="choose__btn">→</button>
+    </div>
+  </section>
+  <section class="about">
+    <h2 class="heading-2 about__text">
+      Resource is <span class="text__accent accent">the perfect and cozy place</span> where you can
+      enjoy a variety of hot beverages, relax, catch up with friends, or get
+      some work done.
+    </h2>
+    <div class="about__images">
+      <div class="about__images-column-1">
+        <img alt="about 1" class="card" src="./images/about-1.jpg"/>
+        <img alt="about 2" class="card" src="./images/about-2.jpg"/>
+      </div>
+      <div class="about__images-column-2">
+        <img alt="about 3" class="card" src="./images/about-3.jpg"/>
+        <img alt="about 4" class="card" src="./images/about-4.jpg"/>
+      </div>
+    </div>
+  </section>
+  <section class="download">
+    <div class="download__text">
+
+    </div>
+  </section>
+</main>
+<footer></footer>
+</body>
 </html>
