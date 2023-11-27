@@ -60,6 +60,60 @@
 .main {
   max-width: 1440px;
   margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.main-img__block {
+  background: url("../images/coffie-main-img.png"), lightgray 50% / cover no-repeat;
+  background-size: 100%;
+  padding: 100px;
+  border-radius: 40px;
+}
+
+.main-img__content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 530px;
+}
+
+.main-img__head {
+  color: var(--text-light, #E1D4C9);
+}
+
+.main-img__head span {
+  color: var(--text-accent, #B0907A);
+}
+
+.main-img__description {
+  color: var(--text-light, #E1D4C9);
+  font-family: var(--font);
+  line-height: 150%;
+}
+
+.main-img__button {
+  display: flex;
+  border-radius: 100px;
+  width: 200px;
+  padding: 20px 78px;
+  background: var(--background-body, #E1D4C9);
+  border: none;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+.main-img__coffee-icon {
+  margin-left: 8px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.main-img__button:hover .main-img__coffee-icon {
+  transition: 0.3s;
+  opacity: 1;
 }
 
 /*Choose*/
@@ -109,7 +163,7 @@
   display: grid;
   inline-size: 100%;
   gap: 40px;
-  margin: 100px 0;
+  /*margin: 100px 0; вместо этого задал gap для main */
 }
 
 .about__text {
