@@ -121,7 +121,8 @@
 .choose__container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
+  flex-direction: column;
 }
 
 .choose__coffee {
@@ -157,13 +158,55 @@
   cursor: pointer;
 }
 
-/*About*/
+.slider__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slider {
+  display: flex;
+  height: 640px;
+  width: 480px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider .choose__container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.choose__container.active {
+  opacity: 1;
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.slider .prev {
+  left: 10px;
+}
+
+.slider .next {
+  right: 10px;
+}
+
+  /*About*/
 
 .about {
   display: grid;
   inline-size: 100%;
   gap: 40px;
-  /*margin: 100px 0; вместо этого задал gap для main */
 }
 
 .about__text {
