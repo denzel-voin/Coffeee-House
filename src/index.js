@@ -1,5 +1,13 @@
 import getIndex from './helper.js';
+import './styles/globals.css'
+import './styles/variables.css'
+import './fonts/Inter-Regular.woff'
+import './fonts/Inter-Regular.woff2'
+import './fonts/Inter-SemiBold.woff'
+import './fonts/Inter-SemiBold.woff2'
+import './fonts/fonts.css'
 import './styles/style.css';
+
 
 import coffee1 from './images/coffee-slider-1.png'
 import coffee2 from './images/coffee-slider-2.png'
