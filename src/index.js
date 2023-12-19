@@ -1,5 +1,9 @@
 import getIndex from './helper.js';
-import './styles/style.css'; 
+import './styles/style.css';
+
+import coffee1 from './images/coffee-slider-1.png'
+import coffee2 from './images/coffee-slider-2.png'
+import coffee3 from './images/coffee-slider-3.png'
 
 class Coffee {
   constructor(name, img, description, cost) {
@@ -36,9 +40,9 @@ class CoffeeSlider {
 const slider = new CoffeeSlider('slider', 'sliderTemplate');
 
 const sliderCoffee = [
-  new Coffee("S’mores Frappuccino", "<%=require('./images/coffee-slider-1.png')%>", "This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.", "$5.50"),
-  new Coffee("Caramel Macchiato", "<%=require('./images/coffee-slider-2.png')%>", "Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.", "$5.00"),
-  new Coffee("Ice coffee", "<%=require('./images/coffee-slider-3.png')%>", "A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.", "$4.50"),
+  new Coffee("S’mores Frappuccino", coffee1, "This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.", "$5.50"),
+  new Coffee("Caramel Macchiato", coffee2, "Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.", "$5.00"),
+  new Coffee("Ice coffee", coffee3, "A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.", "$4.50"),
 ];
 
 slider.render(sliderCoffee);
