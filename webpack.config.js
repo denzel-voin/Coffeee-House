@@ -27,7 +27,8 @@ module.exports = {
 }]},
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html' // путь к файлу index.html
+      template: './src/index.html',
+      inject: 'body'
     }),
     new MiniCssExtractPlugin()
   ]
