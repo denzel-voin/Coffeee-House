@@ -13,8 +13,15 @@ import coffee1 from './images/coffee-slider-1.png'
 import coffee2 from './images/coffee-slider-2.png'
 import coffee3 from './images/coffee-slider-3.png'
 
+// Фабрика для создания объектов Coffee
+class CoffeeFactory {
+  createCoffee(name, description, cost, img) {
+    return new Coffee(name, description, cost, img);
+  }
+}
+
 class Coffee {
-  constructor(name, img, description, cost) {
+  constructor(name, description, cost, img) {
     this.name = name;
     this.img = img;
     this.description = description;
@@ -23,9 +30,10 @@ class Coffee {
 }
 
 class CoffeeSlider {
-  constructor(containerId, cardTemplateId) {
+  constructor(containerId, cardTemplateId, coffeeFactory) {
     this.container = document.getElementById(containerId);
     this.cardTemplate = document.getElementById(cardTemplateId).content;
+    this.coffeeFactory = coffeeFactory;
   }
 
   createCardElement(coffee) {
@@ -37,23 +45,30 @@ class CoffeeSlider {
     return cardElement;
   }
 
-  render(cards) {
-    cards.forEach(coffee => {
+  render(coffees) {
+    coffees.forEach(coffeeData => {
+      // Используем фабрику для создания объектов Coffee
+      const coffee = this.coffeeFactory.createCoffee(coffeeData.name, coffeeData.description, coffeeData.cost, coffeeData.img);
       const cardElement = this.createCardElement(coffee);
       this.container.appendChild(cardElement);
     });
   }
 }
 
-const slider = new CoffeeSlider('slider', 'sliderTemplate');
 
-const sliderCoffee = [
-  new Coffee("S’mores Frappuccino", coffee1, "This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.", "$5.50"),
-  new Coffee("Caramel Macchiato", coffee2, "Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.", "$5.00"),
-  new Coffee("Ice coffee", coffee3, "A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.", "$4.50"),
+const coffeeFactory = new CoffeeFactory();
+
+
+const slider = new CoffeeSlider('slider', 'sliderTemplate', coffeeFactory);
+
+const sliderCoffeeData = [
+  { name: "S’mores Frappuccino", description: "This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.", cost: "$5.50", img: coffee1 },
+  { name: "Caramel Macchiato", description: "Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.", cost: "$5.00", img: coffee2 },
+  { name: "Ice coffee", description: "A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.", cost: "$4.50", img: coffee3 },
 ];
 
-slider.render(sliderCoffee);
+slider.render(sliderCoffeeData);
+
 
 let currentIndex = 0;
 
